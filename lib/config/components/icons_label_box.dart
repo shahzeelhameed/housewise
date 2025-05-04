@@ -24,6 +24,7 @@ class IconLabelBox extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
+            
             height: size / 2.5,
             width: size / 2.5,
             child: Image.asset(imagePath),

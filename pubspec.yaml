@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^6.2.1
   wave: ^0.2.2
   path_provider_foundation: ^2.4.1
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:

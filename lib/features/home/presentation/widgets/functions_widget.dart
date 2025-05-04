@@ -11,6 +11,7 @@ class Functions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       spacing: 40,
+      mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         InkWell(
@@ -29,7 +30,7 @@ class Functions extends StatelessWidget {
           },
           child: IconLabelBox(
               imagePath: "assets/icons/Request Maintenance.png",
-              label: "Request Maintenance"),
+              label: "Maintenance"),
         ),
       ],
     );
