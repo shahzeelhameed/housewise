@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:housewise/admin-features/admin_bottom_navigation.dart';
 import 'package:housewise/config/routes/routes_name.dart';
 import 'package:housewise/features/auth/login/login_screen.dart';
 import 'package:housewise/features/auth/signup/signup_screen.dart';
@@ -21,6 +22,10 @@ class Routes {
 
       case RoutesName.SIGNUP:
         return MaterialPageRoute(builder: (context) => SignUpScreen());
+      // Add other routes here
+      case RoutesName.ADMIN_BOTTOM_NAVIGATION:
+        return MaterialPageRoute(builder: (context) => AdminBottomNavigation());
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

@@ -1,5 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:housewise/admin-features/admin-home/presentation/admin_home_screendart.dart';
+import 'package:housewise/admin-features/admin-water-usage/presentation/admin-water-usage_screen.dart';
+import 'package:housewise/admin-features/defaulters/presentation/defaulters_sceen.dart';
+import 'package:housewise/admin-features/manage-complaints/presentation/manage-complaints_screen.dart';
+import 'package:housewise/admin-features/payment-status/presentation/payment-status_screen.dart';
 import 'package:housewise/config/color/color.dart';
 import 'package:housewise/features/complaint/presentation/screens/complaint_screen.dart';
 import 'package:housewise/features/contact-team/presentation/screens/contact-team_screen.dart';
@@ -18,41 +23,14 @@ class AdminBottomNavigation extends StatefulWidget {
 class _AdminBottomNavigationState extends State<AdminBottomNavigation> {
   final PersistentTabController _controller =
       PersistentTabController(initialIndex: 0);
-  bool _imagesPrecached = false; // Flag for precaching images
-  final bool _snackBarShown = false; // Flag to show SnackBar only once
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // Precache images
-    if (!_imagesPrecached) {
-      precacheImage(const AssetImage("assets/icons/Home.png"), context);
-      precacheImage(const AssetImage("assets/icons/Home (2).png"), context);
-      precacheImage(const AssetImage("assets/icons/My Bills.png"), context);
-      precacheImage(const AssetImage("assets/icons/My Bills (2).png"), context);
-      precacheImage(const AssetImage("assets/icons/Pay Now (2).png"), context);
-      precacheImage(const AssetImage("assets/icons/Pay Now.png"), context);
-      precacheImage(const AssetImage("assets/icons/Complaint.png"), context);
-      precacheImage(
-          const AssetImage(
-              "assets/icons/WhatsApp Image 2025-04-28 at 8.12.33 PM.jpeg"),
-          context);
-      precacheImage(
-          const AssetImage("assets/icons/Contact Team (2).png"), context);
-      precacheImage(const AssetImage("assets/icons/Contact Team.png"), context);
-      _imagesPrecached = true;
-    }
-
-    // Show SnackBar after the first frame is drawn
-  }
 
   List<Widget> _buildScreens() {
-    return const [
-      HomeScreen(),
-      BillsScreen(),
-      ComplaintScreen(),
-      PayNowScreen(),
-      ContactTeamScreen(),
+    return [
+      AdminHomeScreen(),
+      DefaultersSceen(),
+      ManageComplaintsScreen(),
+      AdminWaterUsageScreen(),
+      PaymentStatusScreen()
     ];
   }
 
@@ -61,108 +39,45 @@ class _AdminBottomNavigationState extends State<AdminBottomNavigation> {
     double width = 25;
     return [
       PersistentBottomNavBarItem(
-        icon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Home.png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        inactiveIcon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Home (2).png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
+        icon: Icon(Icons.home, size: 25),
+        inactiveIcon: Icon(Icons.home_outlined, size: 25),
         title: "Home",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/My Bills.png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        inactiveIcon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/My Bills (2).png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        title: "Bills",
+        icon: Icon(Icons.warning, size: 25),
+        inactiveIcon:
+            Icon(Icons.system_security_update_warning_rounded, size: 25),
+        title: "Defaulters",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Complaint.png",
-            fit: BoxFit.contain,
-            gaplessPlayback: true,
+          icon: Icon(
+            Icons.warning_outlined,
+            size: 25,
+            color: AppColor.white,
           ),
-        ),
-        title: "Complaint",
+          inactiveIcon: Icon(
+            Icons.warning_outlined,
+            size: 25,
+            color: AppColor.white,
+          ),
+          title: "Complaints",
+          activeColorPrimary: CupertinoColors.activeBlue,
+          inactiveColorPrimary: CupertinoColors.systemGrey),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.water_drop, size: 25),
+        inactiveIcon: Icon(Icons.water_drop_outlined, size: 25),
+        title: "Water Usage",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Pay Now (2).png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        inactiveIcon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Pay Now.png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        title: "Pay Now",
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Contact Team (2).png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        inactiveIcon: SizedBox(
-          height: height,
-          width: width,
-          child: Image.asset(
-            "assets/icons/Contact Team.png",
-            fit: BoxFit.cover,
-            gaplessPlayback: true,
-          ),
-        ),
-        title: "Team",
+        icon: Icon(Icons.payment, size: 25),
+        inactiveIcon: Icon(Icons.payment_outlined, size: 25),
+        title: "PayStatus",
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:housewise/admin-components/blue_section_titile.dart';
-import 'package:housewise/admin-features/admin-home/widgets/title_input_widget.dart';
-import 'package:housewise/admin-features/admin-home/widgets/writeHere_input_widget.dart';
+import 'package:housewise/admin-features/admin-home/presentation/widgets/admin_notice_board_widget.dart';
+import 'package:housewise/admin-features/admin-home/presentation/widgets/title_input_widget.dart';
+import 'package:housewise/admin-features/admin-home/presentation/widgets/writeHere_input_widget.dart';
 import 'package:housewise/features/request-maintaince/presentation/widgets/description_input_widget.dart';
 
 class AdminNoticeBoardWidget extends StatelessWidget {
@@ -18,6 +19,7 @@ class AdminNoticeBoardWidget extends StatelessWidget {
           BlueSectionTitile(title: "Edit Notice Board"),
           TitleInputWidget(),
           WriteHereInputWidget(),
+          AdminNotice(title: "ABC", description: "Descriptqion"),
         ],
       ),
     );

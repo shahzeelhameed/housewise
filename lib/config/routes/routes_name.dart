@@ -5,4 +5,5 @@ class RoutesName {
   static const String BOTTOM_NAVIGATION = "/bottom_navigation";
   static const String LOGIN = "/login";
   static const String SIGNUP = "/signup";
+  static const String ADMIN_BOTTOM_NAVIGATION = "/admin_bottom_navigation";
 }

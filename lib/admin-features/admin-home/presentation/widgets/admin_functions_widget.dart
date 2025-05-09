@@ -17,13 +17,13 @@ class AdminFunctionsWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconLabelBox(
-                  imagePath: "assets/icons/Request Maintenance.png",
+                  imagePath: "assets/images/Water Comparison Admin.png",
                   label: "Real Time Water\nMonitoring"),
               IconLabelBox(
-                  imagePath: "assets/icons/Pay Now.png",
+                  imagePath: "assets/images/User Requests.png",
                   label: "User Requests"),
               IconLabelBox(
-                  imagePath: "assets/icons/Water Usage Home.png",
+                  imagePath: "assets/images/Add new Admin _ Request.png",
                   label: "Add new Admin\n/ Request"),
             ],
           ),
