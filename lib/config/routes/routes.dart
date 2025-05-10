@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:housewise/admin-features/admin-create-user/presentation/admin_create_user.dart';
+import 'package:housewise/admin-features/admin-user-req/presentation/admin_user_request.dart';
+import 'package:housewise/admin-features/admin-water-usage/presentation/admin-water-usage_screen.dart';
 import 'package:housewise/admin-features/admin_bottom_navigation.dart';
 import 'package:housewise/config/routes/routes_name.dart';
 import 'package:housewise/features/auth/login/login_screen.dart';
@@ -26,6 +29,14 @@ class Routes {
       case RoutesName.ADMIN_BOTTOM_NAVIGATION:
         return MaterialPageRoute(builder: (context) => AdminBottomNavigation());
 
+      case RoutesName.ADMIN_BOTTOM_NAVIGATION:
+        return MaterialPageRoute(builder: (context) => AdminBottomNavigation());
+      case RoutesName.ADMIN_USER_REQUEST:
+        return MaterialPageRoute(builder: (context) => AdminUserRequest());
+      case RoutesName.ADMIN_CREATE_USER:
+        return MaterialPageRoute(builder: (context) => AdminCreateUser());
+      case RoutesName.ADMIN_WATER_USAGE:
+        return MaterialPageRoute(builder: (context) => AdminWaterUsageScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

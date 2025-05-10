@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      initialRoute: RoutesName.LOGIN,
+      initialRoute: RoutesName.ADMIN_BOTTOM_NAVIGATION,
       onGenerateRoute: Routes.generateRoute,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

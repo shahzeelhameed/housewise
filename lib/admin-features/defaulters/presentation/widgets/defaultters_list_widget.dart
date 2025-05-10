@@ -89,4 +89,11 @@ final List<DefaulterModel> defaulters = [
     day: 19,
     dayOfWeek: 'TUE',
   ),
+  DefaulterModel(
+    name: 'John',
+    amount: 527.4,
+    status: 'unpaid',
+    day: 19,
+    dayOfWeek: 'TUE',
+  ),
 ];

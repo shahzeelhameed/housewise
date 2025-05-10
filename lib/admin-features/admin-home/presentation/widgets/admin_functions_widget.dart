@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:housewise/config/components/icons_label_box.dart';
 import 'package:housewise/config/components/section_title.dart';
+import 'package:housewise/config/routes/routes_name.dart';
 
 class AdminFunctionsWidget extends StatelessWidget {
   const AdminFunctionsWidget({super.key});
@@ -16,15 +17,27 @@ class AdminFunctionsWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconLabelBox(
-                  imagePath: "assets/images/Water Comparison Admin.png",
-                  label: "Real Time Water\nMonitoring"),
-              IconLabelBox(
-                  imagePath: "assets/images/User Requests.png",
-                  label: "User Requests"),
-              IconLabelBox(
-                  imagePath: "assets/images/Add new Admin _ Request.png",
-                  label: "Add new Admin\n/ Request"),
+              InkWell(
+                onTap: () => Navigator.of(context, rootNavigator: true)
+                    .pushNamed(RoutesName.ADMIN_WATER_USAGE),
+                child: IconLabelBox(
+                    imagePath: "assets/images/Water Comparison Admin.png",
+                    label: "Real Time Water\nMonitoring"),
+              ),
+              InkWell(
+                onTap: () => Navigator.of(context, rootNavigator: true)
+                    .pushNamed(RoutesName.ADMIN_USER_REQUEST),
+                child: IconLabelBox(
+                    imagePath: "assets/images/User Requests.png",
+                    label: "User Requests"),
+              ),
+              InkWell(
+                onTap: () => Navigator.of(context, rootNavigator: true)
+                    .pushNamed(RoutesName.ADMIN_CREATE_USER),
+                child: IconLabelBox(
+                    imagePath: "assets/images/Add new Admin _ Request.png",
+                    label: "Add new Admin\n/ Request"),
+              ),
             ],
           ),
         ],

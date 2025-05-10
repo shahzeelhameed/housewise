@@ -17,9 +17,7 @@ class AdminNoticeBoardWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           BlueSectionTitile(title: "Edit Notice Board"),
-          TitleInputWidget(),
-          WriteHereInputWidget(),
-          AdminNotice(title: "ABC", description: "Descriptqion"),
+          NoticeManagementScreen()
         ],
       ),
     );
