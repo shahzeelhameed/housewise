@@ -20,7 +20,13 @@ class RequestMaintainceScreen extends StatelessWidget {
         title: "Request Maintaince",
       ),
       body: Column(
-        children: [ProfileBanner(), Expanded(child: RequestMaintainceInputs())],
+        children: [
+          ProfileBanner(
+            name: "Muhammad Umer",
+            address: "Flat no : 1",
+          ),
+          Expanded(child: RequestMaintainceInputs())
+        ],
       ),
     );
   }

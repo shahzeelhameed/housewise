@@ -9,4 +9,5 @@ class RoutesName {
   static const String ADMIN_USER_REQUEST = "/admin_user_request";
   static const String ADMIN_CREATE_USER = "/admin_create-user";
   static const String ADMIN_WATER_USAGE = "/admin_water_usage";
+  static const String DOMESTIC_HOME = "/domestic_home";
 }

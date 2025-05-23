@@ -24,7 +24,10 @@ class BillsScreen extends StatelessWidget {
         child: Column(
           spacing: 10,
           children: [
-            ProfileBanner(),
+            ProfileBanner(
+              name: "Muhammad Umer",
+              address: "Flat no : 1",
+            ),
             AmountDue(),
             BillingAndPaymentHistory(),
           ],

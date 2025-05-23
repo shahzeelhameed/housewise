@@ -4,6 +4,7 @@ import 'package:housewise/admin-features/admin-user-req/presentation/admin_user_
 import 'package:housewise/admin-features/admin-water-usage/presentation/admin-water-usage_screen.dart';
 import 'package:housewise/admin-features/admin_bottom_navigation.dart';
 import 'package:housewise/config/routes/routes_name.dart';
+import 'package:housewise/dosmestic/home/presentation/domestic_homr_screen.dart';
 import 'package:housewise/features/auth/login/login_screen.dart';
 import 'package:housewise/features/auth/signup/signup_screen.dart';
 import 'package:housewise/features/bottom_navigation.dart';
@@ -37,6 +38,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => AdminCreateUser());
       case RoutesName.ADMIN_WATER_USAGE:
         return MaterialPageRoute(builder: (context) => AdminWaterUsageScreen());
+      case RoutesName.DOMESTIC_HOME:
+        return MaterialPageRoute(builder: (context) => DomesticHomeScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

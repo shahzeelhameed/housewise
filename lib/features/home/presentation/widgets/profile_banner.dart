@@ -5,9 +5,10 @@ import 'package:housewise/config/screen_sizes/screen_sizes.dart';
 import 'package:housewise/config/textstyles/text_styles.dart';
 
 class ProfileBanner extends StatelessWidget {
-  const ProfileBanner({
-    super.key,
-  });
+  const ProfileBanner({super.key, required this.name, required this.address});
+
+  final String name;
+  final String address;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class ProfileBanner extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                "Muhammad Umer",
+                name,
                 style: AppTextStyles.mediumSemiBold
                     .copyWith(color: AppColor.white),
               ),
@@ -49,7 +50,7 @@ class ProfileBanner extends StatelessWidget {
                 spacing: 5,
                 children: [
                   Text(
-                    "Flat no : 1",
+                    address,
                     style: AppTextStyles.mediumRegular
                         .copyWith(color: AppColor.white),
                   ),

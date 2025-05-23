@@ -27,7 +27,10 @@ class HomeScreen extends StatelessWidget {
           spacing: 7,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ProfileBanner(),
+            ProfileBanner(
+              name: "Muhammad Umer",
+              address: "Flat no : 1",
+            ),
             WaterInfo(),
             PaymentInfo(),
             CarouselViewImages(),

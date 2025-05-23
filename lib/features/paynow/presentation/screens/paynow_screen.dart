@@ -25,7 +25,10 @@ class PayNowScreen extends StatelessWidget {
           spacing: 10,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ProfileBanner(),
+            ProfileBanner(
+              name: "Muhammad Umer",
+              address: "Flat no : 1",
+            ),
             BillInfoCard(),
             SectionTitleBox(title: "Payment"),
             AmountDue(),
